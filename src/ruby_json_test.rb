@@ -4,7 +4,7 @@ require "rubygems"
 require "cloudmunch_sdk"
 require "date"
 
-class RubySDKHelloWorldPluginApp < AppAbstract
+class Ruby_json_App < AppAbstract
 
     def initializeApp()
         json_input = getJSONArgs()
@@ -18,16 +18,16 @@ class RubySDKHelloWorldPluginApp < AppAbstract
         @project = appContext.get_data('project')
         
         logInit(@log_level)
-        log("info", "initializeApp is invoked in RubySDK_HelloWorld_plugin App")     
+        log("info", "initializeApp is invoked in  Ruby_json_App")     
     end
 
     def process()
-        log("info", "process is invoked in RubySDK_HelloWorld_plugin App")
+        log("info", "process is invoked in  Ruby_json_App")
         saveGreetingMessage(@greeting_param.to_json)
     end  
 
     def saveGreetingMessage(message)
-        log("info", "saveGreetingMessage is invoked in RubySDK_HelloWorld_plugin App")
+        log("info", "saveGreetingMessage is invoked in  Ruby_json_App")
         log("debug", message)
         # the result_array needs to be stored into CMDB
         # updateCustomContext()
@@ -47,12 +47,12 @@ class RubySDKHelloWorldPluginApp < AppAbstract
     end 
 
     def cleanupApp()
-        log("info", "cleanupApp is invoked in RubySDK_HelloWorld_plugin App")
+        log("info", "cleanupApp is invoked in  Ruby_json_App")
         logClose()
     end
 
 
 end
 
-helloWorldPlugin = RubySDKHelloWorldPluginApp.new()
-helloWorldPlugin.start()
+testPlugin = Ruby_json_App.new()
+testPlugin.start()
