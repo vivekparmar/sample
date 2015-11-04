@@ -5,7 +5,7 @@ require_relative "../src/ruby_json_test.rb"
 class TestRubySDKHelloWorldApp < Test::Unit::TestCase
 
     def test_helloworldapp
-        ruby_json_test.new(ARGV)
+        Ruby_json_App.new(ARGV)
     end
 
 end
